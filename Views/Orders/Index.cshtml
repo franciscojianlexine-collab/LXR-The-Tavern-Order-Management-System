@@ -9,6 +9,10 @@
 
     <h1 class="text-center mb-4">Orders Dashboard</h1>
 
+     <input type="text" id="searchOrders"
+       class="form-control mb-3"
+       placeholder="Search orders...">
+
     @if (!Model.Any())
     {
         <div class="alert alert-info text-center">
@@ -32,7 +36,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="ordersTable">
 
                     @foreach (var order in Model)
                     {

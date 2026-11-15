@@ -24,13 +24,17 @@
             View Cart
         </a>
     </div>
-
-    <div class="row">
+<div class="mb-3">
+    <input type="text"
+           id="searchMenu"
+           class="form-control"
+           placeholder="Search food, drinks, or category...">
+</div>
+    <div class="row" id="menuItems">
 
         @foreach (var item in Model)
         {
-            <div class="col-md-4 mb-4">
-
+<div class="col-md-4 mb-4 menu-card">
                 <div class="card h-100 shadow-sm">
 
                     @if (!string.IsNullOrEmpty(item.ImageUrl))

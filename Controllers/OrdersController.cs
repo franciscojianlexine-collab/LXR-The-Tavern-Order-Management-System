@@ -15,7 +15,7 @@ namespace LXR_The_Tavern_Order_Management_System.Controllers
             _db = db;
         }
 
-        // DISPLAY ALL ORDERS
+        
         public IActionResult Index()
         {
             var orders = _db.Orders
@@ -25,7 +25,7 @@ namespace LXR_The_Tavern_Order_Management_System.Controllers
             return View(orders);
         }
 
-        // DISPLAY ORDER CONFIRMATION
+
         public IActionResult Confirmation(int id)
         {
             var order = _db.Orders
